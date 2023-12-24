@@ -2,7 +2,7 @@ let carts = [];
 const addedProducts = document.querySelector(".products")
 let totalPrice = 0
 
-// update cart
+// --------------------------------------------------------------------- update cart
 const updateMyCart = () => {
     const numberOfCart = document.getElementById("numOfCarts")
     numberOfCart.innerHTML = parseInt(carts.length)
@@ -14,7 +14,7 @@ const updateMyCart = () => {
     }
 }
 
-// onclick increase quantity
+// --------------------------------------------------------------------- onclick increase quantity
 const increaseQuantity = (id) => {
     const cartObj = carts.find((cart) => cart.pro_id == id)
     cartObj.pro_quantity += 1
@@ -22,7 +22,7 @@ const increaseQuantity = (id) => {
     updateDisplay()
 }
 
-// onclick decarease quantity
+// --------------------------------------------------------------------- onclick decarease quantity
 const decareaseQuantity = (id) => {
     const cartObj = carts.find((cart) => cart.pro_id == id)
     cartObj.pro_quantity -= 1
@@ -34,7 +34,7 @@ const decareaseQuantity = (id) => {
     updateMyCart()
 }
 
-// update total price 
+// --------------------------------------------------------------------- update total price 
 const updateTotalPrice = () => {
     const showTotalPrice = document.getElementById("showTotalPrice")
     totalPrice = carts.reduce((total, cart) => {
@@ -43,7 +43,7 @@ const updateTotalPrice = () => {
     showTotalPrice.innerHTML = `Rs.${totalPrice}`
 }
 
-// update display
+// --------------------------------------------------------------------- update display
 const updateDisplay = () => {
     addedProducts.innerHTML = ""
     carts.forEach((cart) => {
@@ -65,7 +65,7 @@ const updateDisplay = () => {
     })
 }
 
-// add to cart
+// --------------------------------------------------------------------- add to cart
 const addCart = (id) => {
     const isCartExist = carts.find((cart) => cart.pro_id == id)
     if (!isCartExist) {
