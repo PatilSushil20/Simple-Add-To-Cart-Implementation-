@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dynamic.css">
+    <title>Add to cart</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h2>Your shopping cart</h2>
+                <button onclick="showCart()" class="myCartBtn">My cart &nbsp;&nbsp;&nbsp;<span
+                        id="numOfCarts">0</span></button>
+            </div>
+            <div class="cartContainer">
+                <div class="cart" id="1">
+                    <img src="/images/shoe-1.jpg" alt="">
+                    <p>Product 1</p>
+                    <span>Rs.<span>120</span></span>
+                    <button class="addBtn" onclick="addCart(1)">Add to cart</button>
+                </div>
+                <div class="cart" id="2">
+                    <img src="/images/shoe-2.jpg" alt="">
+                    <p>Product 2</p>
+                    <span>Rs.<span>60</span></span>
+                    <button class="addBtn" onclick="addCart(2)">Add to cart</button>
+                </div>
+                <div class="cart" id="3">
+                    <img src="/images/shoe-1.jpg" alt="">
+                    <p>Product 3</p>
+                    <span>Rs.<span>420</span></span>
+                    <button class="addBtn" onclick="addCart(3)">Add to cart</button>
+                </div>
+                <div class="cart" id="4">
+                    <img src="/images/shoe-2.jpg" alt="">
+                    <p>Product 4</p>
+                    <span>Rs.<span>180</span></span>
+                    <button class="addBtn" onclick="addCart(4)">Add to cart</button>
+                </div>
+                <div class="cart" id="5">
+                    <img src="/images/shoe-1.jpg" alt="">
+                    <p>Product 5</p>
+                    <span>Rs.<span>90</span></span>
+                    <button class="addBtn" onclick="addCart(5)">Add to cart</button>
+                </div>
+                <div class="cart" id="6">
+                    <img src="/images/shoe-2.jpg" alt="">
+                    <p>Product 6</p>
+                    <span>Rs.<span>240</span></span>
+                    <button class="addBtn" onclick="addCart(6)">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- side bar -->
+        <div class="sideBar">
+            <big>Cards</big>
+            <div class="columnForProduct">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Quantity</span>
+            </div>
+            <!-- all added Product gose here -->
+            <ul class="products">
+            </ul>
+            <div class="sideBarFooter">
+                <span>Total Price : <span id="showTotalPrice">Rs.0</span></span>
+                <button onclick="hideBar()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+ul.products {
+    margin: 33px 10px;
+    min-height: 100vh;
+}
+
+.products .cart {
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 17px 0;
+}
+
+.cartLeft {
+    display: flex;
+    align-items: center;
+}
+
+.cartLeft p {
+    margin: 0 6px;
+}
+
+.cartRight button {
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.4s ease;
+}
+
+.cartRight button:hover {
+    background-color: black;
+    color: white;
+}
+
+.cartRight span {
+    background-color: rgb(186, 178, 178);
+    padding: 5px 10px;
+    border-radius: 5px;
+}

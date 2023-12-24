@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.content {
+    width: 60%;
+}
+
+.cartContainer {
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0fr);
+    grid-gap: 1em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.myCartBtn {
+    padding: 7px 0 7px 13px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#numOfCarts {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    height: 20px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    display: grid;
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px;
+    display: none;
+}
+
+.cartContainer .cart {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 40px;
+    text-align: center;
+}
+
+.cartContainer .cart img {
+    width: 100px;
+    margin-bottom: 12px;
+}
+
+.cartContainer .cart p {
+    margin: 10px 0;
+}
+
+.cartContainer .cart span {
+    margin: 10px 0;
+}
+
+.cartContainer>.cart>.addBtn {
+    padding: 5px 7px;
+}
+
+.sideBar {
+    height: 100%;
+    width: 40%;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 0.5s ease-in-out;
+    /* padding: 22px; */
+}
+
+.sideBar.active {
+    right: 0;
+}
+
+.sideBarFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    border: 1px solid black;
+}
+
+.sideBarFooter span {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+}
+
+.sideBarFooter button {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 18px;
+    transition: 0.4s ease;
+}
+
+.sideBarFooter button:hover {
+    background-color: black;
+    color: white;
+}
+
+.sideBar big {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 28px;
+}
+
+.columnForProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 4em;
+    color: black;
+    font-weight: bold;
+}
+
+.columnForProduct span {
+    border-bottom: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
